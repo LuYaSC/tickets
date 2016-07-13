@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entities;
+namespace Tickets\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
