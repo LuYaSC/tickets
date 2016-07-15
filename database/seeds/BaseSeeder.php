@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Seeder;
 abstract class BaseSeeder extends Seeder
 {
-    protected $total = 50;
+    protected $total = 100;
     protected static $pool = array();
     public function run()
     {

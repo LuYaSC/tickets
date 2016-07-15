@@ -21,11 +21,6 @@ class TicketTableSeeder extends BaseSeeder
 		'user_id'=> $this->getRandom('User')->id
 				];
 	}
-	public function run()
-	{
-		
-		$this->createMultiple(100);
-	}
 	
 
 }

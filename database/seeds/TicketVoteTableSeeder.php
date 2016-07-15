@@ -7,8 +7,9 @@ use Faker\Factory as Faker;
 /**
 * 
 */
-class TicketVotesTableSeeder extends BaseSeeder
+class TicketVoteTableSeeder extends BaseSeeder
 {
+	protected $total=100;
 	public function getModel()
 	{
 		return new TicketVote();
@@ -16,9 +17,8 @@ class TicketVotesTableSeeder extends BaseSeeder
 	public function getDummyData(Generator $faker, array $customValues = array())
 	{
 		return [
-		'title' => $faker->sentence(),
-		'status'=> $faker->randomElement(['open','open', 'closed']),
-		'user_id'=>1
+		'user_id'=>$this->getRandom('User')->id,
+		'ticket_id'=>$this->getRandom('Ticket')->id
 				];
 	}
 	public function run()
